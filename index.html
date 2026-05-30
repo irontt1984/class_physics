@@ -286,12 +286,27 @@ body.light-mode small{
   color:#172033;
 }.theme-toggle{
   white-space:nowrap;
+/* --- 글자 크기 1.5배 확대 스크립트 --- */
+body, p, span, a, li, td, th, input, textarea, button, select {
+  font-size: 1.5rem !important; /* 기본 본문 글자 크기를 1.5배로 고정 */
+}
+
+/* 제목들은 본문보다 더 커야 하므로 비율에 맞춰 조정 */
+h1 { font-size: 3.0rem !important; }
+h2 { font-size: 2.5rem !important; }
+h3 { font-size: 2.0rem !important; }
+h4 { font-size: 1.75rem !important; }
+
+/* 아이콘이나 작은 배지류도 동반 상승 */
+.badge, .tag, i, small {
+  font-size: 1.2rem !important;
+}
 }</style>
 </head>
 <body>
 <header>
   <div>
-    <div class="logo-main">Class<span>_</span>Physics<span style="font-size:11px;color:#8892a4;font-weight:400">(물리쌤 최태현)</span></div>
+    <div class="logo-main" onclick="window.location.reload()" style="cursor: pointer;">Class<span>_</span>Physics<span style="font-size:11px;color:#8892a4;font-weight:400">(물리쌤 최태현)</span></div>
     <div class="logo-sub">당신에게 필요한 물리</div>
   </div>
   <div class="hright">
