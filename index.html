@@ -713,7 +713,7 @@ function loadPosts() {
     else { grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--red);font-size:12px">오류: ' + (data.message || "알 수 없는 오류") + "</div>"; }
   }).catch(function(e) { grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--red);font-size:12px">연결 오류: ' + e.message + "</div>"; });
 }var EMOJI = { "역학": "⚙", "전기": "⚡", "파동": "🌊", "열역학": "🌡", "광학": "💡", "기타": "🔬", "교사자료": "👨‍🏫" };
-var TBGC = { "역학": "#39FF14", "전기": "#141000", "파동": "#0e0a1c", "열역학": "#FF1A75", "광학": "#061410", "기타": "#0f1117", "교사자료": "#1a1200" };
+var TBGC = { "역학": "#39FF14", "전기": "#00E5FF", "파동": "#FF5F1F", "열역학": "#FF1A75", "광학": "#9D00FF", "기타": "#0f1117", "교사자료": "#1a1200" };
 function esc(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
 function renderG() {
   var grid = document.getElementById("gg");
