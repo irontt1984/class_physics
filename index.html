@@ -6,19 +6,18 @@
 <title>Class Physics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js\"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
 :root{
-  /* 화사하고 밝은 색감으로 변수 수정 */
   --bg: #f4f7fa; 
   --bg2: #ffffff; 
   --bg3: #eef2f7; 
   --bg4: #e0e6ed; 
-  --accent: #0076ff; /* 신뢰감을 주는 화사한 블루 */
+  --accent: #0076ff; 
   --green: #10b981; 
   --red: #ef4444; 
   --amber: #f59e0b; 
-  --text: #1f2937; /* 밝은 배경에 맞는 어두운 글자색 */
+  --text: #1f2937; 
   --text2: #4b5563; 
   --border: rgba(0,0,0,0.08); 
   --borderB: rgba(0,118,255,0.3); 
@@ -30,7 +29,7 @@
 body{background:var(--bg);color:var(--text);font-family:var(--sans);overflow:hidden;height:100vh}
 button,input,textarea,select{font-family:inherit;color:inherit}
 .app{display:flex;flex-direction:column;height:100vh}
-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;height:56px;display:flex;align-items:center;justify-content:between;flex-shrink:0}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo{font-family:var(--mono);font-weight:700;font-size:1.25rem;color:var(--text);display:flex;align-items:center;gap:6px}
 .logo span{color:var(--accent)}
@@ -44,7 +43,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 .btn.bdanger:hover{background:rgba(239,68,68,0.2)}
 .main-container{display:flex;flex:1;overflow:hidden;position:relative}
 .sidebar{width:280px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;transition:transform 0.3s}
-.sidebar-head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:between}
+.sidebar-head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .sidebar-title{font-size:0.95rem;font-weight:700;letter-spacing:0.05em;color:var(--text2)}
 .menu-list{padding:10px;list-style:none;overflow-y:auto;flex:1}
 .menu-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:6px;cursor:pointer;font-size:0.9rem;margin-bottom:4px;transition:background 0.2s}
@@ -55,14 +54,14 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 .pane{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
 .pane-editor{flex:4}
 .pane-preview{flex:6}
-.pane-head{background:var(--bg3);padding:10px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:between;height:44px;flex-shrink:0}
+.pane-head{background:var(--bg3);padding:10px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;height:44px;flex-shrink:0}
 .pane-title{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text2);display:flex;align-items:center;gap:6px}
 .pane-actions{display:flex;align-items:center;gap:8px}
 .pane-body{flex:1;overflow:hidden;position:relative}
 .editor-textarea{width:100%;height:100%;border:none;resize:none;outline:none;padding:16px;font-family:var(--mono);font-size:0.95rem;line-height:1.5;background:var(--bg2);color:var(--text)}
 .preview-iframe{width:100%;height:100%;border:none;background:#fff}
 .gallery-section{padding:24px;overflow-y:auto;flex:1;display:none}
-.gallery-header{display:flex;align-items:center;justify-content:between;margin-bottom:24px;gap:16px;flex-wrap:wrap}
+.gallery-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:16px;flex-wrap:wrap}
 .gallery-title{font-size:1.5rem;font-weight:700}
 .gallery-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .search-box{position:relative}
@@ -81,13 +80,13 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 .card-tag{align-self:start;font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(0,118,255,0.1);color:var(--accent)}
 .card-title{font-size:1.05rem;font-weight:700;line-height:1.4}
 .card-desc{font-size:0.85rem;color:var(--text2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-foot{padding:12px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:between;font-size:0.8rem;color:var(--text2);background:var(--bg3)}
+.card-foot{padding:12px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:0.8rem;color:var(--text2);background:var(--bg3)}
 .card-author{display:flex;align-items:center;gap:6px;font-weight:500}
 .card-meta{display:flex;align-items:center;gap:10px}
 .popup-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
 .pbox{background:var(--bg2);border:1px solid var(--border);border-radius:12px;width:100%;max-width:500px;box-shadow:0 20px 25px -5px rgba(0,0,0,0.1);display:flex;flex-direction:column;overflow:hidden;animation:pout 0.2s ease-out}
 @keyframes pout{from{transform:scale(0.95);opacity:0}to{transform:scale(1);opacity:1}}
-.phead{padding:20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:between;background:var(--bg3)}
+.phead{padding:20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--bg3)}
 .phead h3{font-size:1.15rem;font-weight:700}
 .pbody{padding:20px;overflow-y:auto;max-height:70vh;display:flex;flex-direction:column;gap:16px}
 .pfoot{padding:16px 20px;border-top:1px solid var(--border);background:var(--bg3);display:flex;justify-content:end;gap:10px}
@@ -103,11 +102,11 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 .guide-box{background:rgba(0,118,255,0.04);border:1px dashed var(--borderB);padding:14px;border-radius:8px;font-size:0.825rem;line-height:1.5;color:var(--text2)}
 .guide-box strong{color:var(--text)}
 .fsview-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;background:var(--bg);z-index:3000;display:none;flex-direction:column}
-.fsview-head{height:50px;background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;justify-content:between}
+.fsview-head{height:50px;background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;justify-content:space-between}
 .fsview-body{flex:1;background:#fff}
 .report-bg,.prompt-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:4000;display:none;align-items:center;justify-content:center;padding:20px}
 .report-box,.prompt-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;width:100%;max-width:700px;height:80vh;display:flex;flex-direction:column;box-shadow:0 25px 50px -12px rgba(0,0,0,0.25)}
-.report-head,.prompt-head{padding:20px;border-bottom:1px solid var(--border);background:var(--bg3);display:flex;align-items:center;justify-content:between}
+.report-head,.prompt-head{padding:20px;border-bottom:1px solid var(--border);background:var(--bg3);display:flex;align-items:center;justify-content:space-between}
 .report-head h3,.prompt-head h3{font-size:1.15rem;font-weight:700;margin-bottom:2px}
 .report-head p,.prompt-head p{font-size:0.8rem;color:var(--text2)}
 .report-body,.prompt-body{flex:1;padding:20px;overflow-y:auto;font-size:0.95rem;line-height:1.6;white-space:pre-wrap}
@@ -125,13 +124,29 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 .qr-pop-close{font-size:0.75rem;color:var(--text2);background:none;border:none;cursor:pointer;text-decoration:underline}
 .view-report-btn{background:none;border:none;color:var(--accent);cursor:pointer;font-size:0.8rem;text-decoration:underline;padding:0;font-family:inherit}
 .view-report-btn:hover{color:#005ecb}
+
+/* 📱 모바일 반응형 대응을 위한 미디어 쿼리 추가 */
+@media (max-width: 768px) {
+  body { overflow-y: auto; height: auto; }
+  .app { height: auto; min-height: 100vh; }
+  header { flex-direction: column; height: auto; padding: 10px; gap: 10px; text-align: center; }
+  .slogan { display: none; }
+  .nav-actions { flex-wrap: wrap; justify-content: center; width: 100%; gap: 6px; }
+  .nav-actions .btn { padding: 6px 10px; font-size: 0.8rem; }
+  .main-container { flex-direction: column; overflow: visible; height: auto; }
+  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .btn-grid { grid-template-columns: repeat(3, 1fr); }
+  .workspace { flex-direction: column; height: auto; overflow: visible; padding: 10px; gap: 12px; }
+  .pane { height: 400px; } /* 모바일에서는 에디터와 프리뷰를 각각 400px 높이로 세로 정렬 */
+  .cards-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
 <div class="app">
   <header>
-    <a href="#" class="brand" onclick="e.preventDefault();showView('editor')">
+    <a href="#" class="brand" onclick="event.preventDefault();showView('editor')">
       <div class="logo">⚡ <span>Class_Physics</span></div>
       <div class="slogan">물리를 물리스럽게</div>
     </a>
@@ -184,8 +199,8 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
           <div class="pane-body">
             <textarea class="editor-textarea" id="code-editor" spellcheck="false" placeholder="⚛코드를 입력하고 [▶ 실행]을 눌러주세요"></textarea>
           </div>
-          <div style="padding:8px 16px; background:var(--bg3); border-top:1px solid var(--border); font-size:0.75rem; color:var(--text2); display:flex; justify-content:between; align-items:center;">
-            <div>Ctrl+Enter · 실행 &nbsp;|&nbsp; Tab · 들여쓰기</div>
+          <div style="padding:8px 16px; background:var(--bg3); border-top:1px solid var(--border); font-size:0.75rem; color:var(--text2); display:flex; justify-content:space-between; align-items:center;">
+            <div>Ctrl+Enter · 실행</div>
             <button class="btn baccent" onclick="runPreview()">▶ 실행</button>
           </div>
         </div>
@@ -196,14 +211,14 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
             <div class="pane-actions">
               <button class="btn" onclick="runPreview()" title="새로고침">↻</button>
               <button class="btn" onclick="openFullscreen()">⥲ 전체화면</button>
-              <button class="btn baccent" onclick="openUploadModal()">↑ 갤러리에 올리기</button>
+              <button class="btn baccent" onclick="openUploadModal()">↑ 갤러리 등록</button>
             </div>
           </div>
           <div class="pane-body" id="preview-container">
             <iframe class="preview-iframe" id="preview-iframe" sandbox="allow-scripts"></iframe>
           </div>
           <div style="padding:6px 16px; background:var(--bg3); border-top:1px solid var(--border); font-size:0.725rem; color:var(--text2); text-align:right;">
-            sandbox · 안전 실행 환경
+            sandbox 환경
           </div>
         </div>
       </div>
@@ -226,7 +241,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 
         <div class="gallery-tabs">
           <button class="gtab active" id="tab-student" onclick="switchTab('student')">학생 작품</button>
-          <button class="gtab" id="tab-teacher" onclick="switchTab('teacher_recom')">교사 추천 (준비중)</button>
+          <button class="gtab" id="tab-teacher" onclick="switchTab('teacher_recom')">교사 추천</button>
         </div>
 
         <div class="cards-grid" id="cards-grid"></div>
@@ -265,33 +280,24 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
         </div>
       </div>
       <div class="fgroup">
-        <label>비밀번호 <span>*</span> (수정·삭제용)</label>
+        <label>비밀번호 <span>*</span> (4자리 이상)</label>
         <div class="pass-input-wrap">
-          <input type="password" class="form-input" id="up-password" placeholder="4자리 이상 숫자/문자">
+          <input type="password" class="form-input" id="up-password">
           <button class="pass-toggle" type="button" onclick="togglePassView('up-password')">👁</button>
         </div>
       </div>
       <div class="fgroup">
-        <label>간단한 설명 (선택)</label>
-        <textarea class="form-textarea" id="up-desc" placeholder="어떤 물리 원리를 담고 있는지 적어주세요."></textarea>
+        <label>간단한 설명</label>
+        <textarea class="form-textarea" id="up-desc" placeholder="물리 원리를 설명해 주세요."></textarea>
       </div>
-      
-      <div class="guide-box">
-        <strong>공개 자료 작성 안내</strong><br><br>
-        아래에는 두 가지를 따로 제출합니다. <strong>AI 대화 원문</strong>은 선생님만 확인하고, <strong>공개용 제작 과정 보고서</strong>는 갤러리에서 모두가 볼 수 있습니다.<br>
-        공개용 보고서에는 이름, 이메일, 계정 정보, 비밀번호, API 키, 토큰, 인증 코드, 개인적인 대화가 들어가지 않도록 반드시 확인하세요.
-      </div>
-
       <div class="fgroup">
-        <label>[관리자 확인용] AI와 나눈 실제 대화 원문 (선생님만 확인)</label>
-        <textarea class="form-textarea" id="up-ai-chat" style="height:80px;" placeholder="AI창 전체를 복사(Ctrl+A -> Ctrl+C)해서 그대로 붙여넣으세요."></textarea>
+        <label>AI 대화 원문</label>
+        <textarea class="form-textarea" id="up-ai-chat" style="height:60px;"></textarea>
       </div>
-
       <div class="fgroup">
-        <label>[공개용] 앱 제작 과정 보고서 (갤러리에서 모두 공개)</label>
-        <textarea class="form-textarea" id="up-report" style="height:120px;" placeholder="아래의 프롬프트 버튼을 이용해 AI에게 보고서 정리를 요청한 뒤 그 결과값을 복사해 붙여넣으세요."></textarea>
-        <button class="btn" style="margin-top:6px; background:rgba(0,118,255,0.05); color:var(--accent);" onclick="copyPromptTemplate()">공개용 정리 프롬프트 복사</button>
-        <p style="font-size:0.75rem; color:var(--text2); margin-top:2px;">복사한 프롬프트를 AI에게 넣어 공개용 보고서를 만든 뒤 붙여넣으세요.</p>
+        <label>앱 제작 과정 보고서</label>
+        <textarea class="form-textarea" id="up-report" style="height:100px;"></textarea>
+        <button class="btn" style="margin-top:6px;" onclick="copyPromptTemplate()">공개용 정리 프롬프트 복사</button>
       </div>
     </div>
     <div class="pfoot">
@@ -303,7 +309,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
 <div class="fsview-bg" id="fsview-bg">
   <div class="fsview-head">
     <div style="font-weight:700; font-family:var(--mono);">Class Physics — 전체화면</div>
-    <button class="btn bdanger" onclick="closeFullscreen()">✕ 닫기 (ESC)</button>
+    <button class="btn bdanger" onclick="closeFullscreen()">✕ 닫기</button>
   </div>
   <div class="fsview-body" id="fsview-body-container"></div>
 </div>
@@ -312,12 +318,9 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
   <div class="pbox" style="max-width:600px;">
     <div class="phead">
       <h3>제작 과정 보고서</h3>
-      <button class="btn bdanger" onclick="closeReportModal()">✕ 닫기</button>
+      <button class="btn bdanger" onclick="closeReportModal()">✕</button>
     </div>
     <div class="pbody" id="report-modal-body" style="white-space:pre-wrap; font-size:0.9rem; line-height:1.6;"></div>
-    <div class="pfoot">
-      <button class="btn" onclick="closeReportModal()">닫기</button>
-    </div>
   </div>
 </div>
 
@@ -329,10 +332,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
     </div>
     <div class="pbody" style="align-items:center; justify-content:center; padding:30px 20px;">
       <div id="qr-canvas-target"></div>
-      <p id="qr-modal-title" style="margin-top:12px; font-weight:700; font-size:0.95rem;"></p>
-    </div>
-    <div class="pfoot" style="justify-content:center;">
-      <button class="btn" onclick="closeQrModal()">닫기</button>
+      <p id="qr-modal-title" style="margin-top:12px; font-weight:700;"></p>
     </div>
   </div>
 </div>
@@ -344,12 +344,8 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
       <button class="btn bdanger" onclick="closePasswordModal()">✕</button>
     </div>
     <div class="pbody">
-      <div class="fgroup">
-        <label>해당 항목의 비밀번호를 입력하세요.</label>
-        <div class="pass-input-wrap">
-          <input type="password" class="form-input" id="confirm-password-input">
-          <button class="pass-toggle" type="button" onclick="togglePassView('confirm-password-input')">👁</button>
-        </div>
+      <div class="pass-input-wrap">
+        <input type="password" class="form-input" id="confirm-password-input">
       </div>
     </div>
     <div class="pfoot">
@@ -366,10 +362,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
       <button class="btn bdanger" onclick="closeAdminModal()">✕</button>
     </div>
     <div class="pbody">
-      <div class="fgroup">
-        <label>관리자 비밀번호</label>
-        <input type="password" class="form-input" id="admin-password-input" onkeydown="if(event.key==='Enter')adminLogin()">
-      </div>
+      <input type="password" class="form-input" id="admin-password-input" onkeydown="if(event.key==='Enter')adminLogin()">
     </div>
     <div class="pfoot">
       <button class="btn baccent" style="width:100%" onclick="adminLogin()">로그인</button>
@@ -377,44 +370,9 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20p
   </div>
 </div>
 
-<div class="report-bg" id="report-bg" onclick="if(event.target===this)closeReportBox()">
-  <div class="report-box">
-    <div class="report-head">
-      <div>
-        <h3 id=\"report-title\">제작 과정 보고서</h3>
-        <p id=\"report-desc\">공개용 자료입니다.</p>
-      </div>
-      <button class="btn bdanger" onclick="closeReportBox()">✕ 닫기</button>
-    </div>
-    <div class="report-body" id="report-body"></div>
-    <div class="report-foot">
-      <button class="btn" onclick="copyReportBox()">복사</button>
-      <button class="btn" onclick="closeReportBox()">닫기</button>
-    </div>
-  </div>
-</div>
-
-<div class="prompt-bg" id="prompt-bg" onclick="if(event.target===this)closePromptBox()">
-  <div class="prompt-box">
-    <div class="prompt-head">
-      <div>
-        <h3>공개용 정리 프롬프트</h3>
-        <p>아래 내용을 확인한 뒤 복사해서 생성형 AI 대화창에 붙여넣으세요. 실제 대화 원문은 마지막 부분에 학생이 직접 붙여넣으면 됩니다.</p>
-      </div>
-      <button class="btn bdanger" onclick="closePromptBox()">✕ 닫기</button>
-    </div>
-    <div class="prompt-body" id="prompt-body"></div>
-    <div class="prompt-foot">
-      <button class="btn" onclick="copyPromptBox()">프롬프트 복사</button>
-      <button class="btn" onclick="closePromptBox()">닫기</button>
-    </div>
-  </div>
-</div>
-
 <div class="toast" id="toast"></div>
 
 <script>
-// 관리자 암호를 dnfdodrl1! 로 수정 완료
 const CONFIG = {
   BIN_ID: '67a030d3e41b4d34e484fd81',
   X_MASTER_KEY: '$2b$10$wNqV9yX6w.i9OswZ3D7Rju7K0w6p5Bfe.UoEshd6fW0E87FmSlyW2',
@@ -422,211 +380,11 @@ const CONFIG = {
 };
 
 const EXAMPLES = {
-  pendulum: `<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body { margin: 0; background: #fff; overflow: hidden; font-family: sans-serif; }
-    canvas { display: block; background: #f8fafc; }
-    .controls { position: fixed; top: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    label { font-size: 12px; font-weight: bold; color: #334155; display: block; margin-bottom: 4px; }
-    input { width: 120px; margin-bottom: 8px; display: block; }
-  </style>
-</head>
-<body>
-  <div class="controls">
-    <label>줄 길이 (px)</label>
-    <input type="range" id="length" min="50" max="250" value="180">
-    <label>중력 가속도</label>
-    <input type="range" id="gravity" min="0" max="2" step="0.1" value="0.8">
-  </div>
-  <canvas id="simCanvas"></canvas>
-  <script>
-    const canvas = document.getElementById('simCanvas');
-    const ctx = canvas.getContext('2d');
-    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-    window.addEventListener('resize', resize); resize();
-
-    let angle = Math.PI / 4;
-    let angleV = 0;
-    let angleA = 0;
-    
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const L = parseFloat(document.getElementById('length').value);
-      const g = parseFloat(document.getElementById('gravity').value);
-      
-      angleA = (-1 * g / L) * Math.sin(angle);
-      angleV += angleA;
-      angleV *= 0.995;
-      angle = angle + angleV;
-      
-      const originX = canvas.width / 2;
-      const originY = 80;
-      const x = originX + L * Math.sin(angle);
-      const y = originY + L * Math.cos(angle);
-      
-      ctx.strokeStyle = '#64748b';
-      ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.moveTo(originX, originY); ctx.lineTo(x, y); ctx.stroke();
-      
-      ctx.fillStyle = '#0076ff';
-      ctx.beginPath(); ctx.arc(x, y, 20, 0, Math.PI * 2); ctx.fill();
-      
-      ctx.fillStyle = '#334155';
-      ctx.beginPath(); ctx.arc(originX, originY, 6, 0, Math.PI * 2); ctx.fill();
-      
-      requestAnimationFrame(draw);
-    }
-    draw();
-  <\/script>
-</body>
-</html>`,
-  projectile: `<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body { margin: 0; background: #fff; overflow: hidden; font-family: sans-serif; }
-    canvas { display: block; background: #f8fafc; }
-    .controls { position: fixed; top: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    button { background: #0076ff; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-  </style>
-</head>
-<body>
-  <div class="controls">
-    <button onclick="launch()">발사!</button>
-  </div>
-  <canvas id="simCanvas"></canvas>
-  <script>
-    const canvas = document.getElementById('simCanvas');
-    const ctx = canvas.getContext('2d');
-    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-    window.addEventListener('resize', resize); resize();
-
-    let ball = { x: 50, y: 0, vx: 8, vy: -12, r: 12 };
-    const g = 0.2;
-    let path = [];
-
-    ball.y = canvas.height - 50;
-
-    function launch() {
-      ball.x = 50; ball.y = canvas.height - 50;
-      ball.vx = 7 + Math.random() * 4; ball.vy = -10 - Math.random() * 6;
-      path = [];
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      ctx.strokeStyle = '#cbd5e1'; ctx.lineWidth = 2;
-      ctx.beginPath(); ctx.moveTo(0, canvas.height-50); ctx.lineTo(canvas.width, canvas.height-50); ctx.stroke();
-      
-      if (ball.y < canvas.height - 50 + ball.r) {
-        ball.vy += g; ball.x += ball.vx; ball.y += ball.vy;
-        path.push({x: ball.x, y: ball.y});
-      }
-      
-      ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 2; ctx.beginPath();
-      for(let i=0; i<path.length; i++) {
-        if(i===0) ctx.moveTo(path[i].x, path[i].y); else ctx.lineTo(path[i].x, path[i].y);
-      }
-      ctx.stroke();
-      
-      ctx.fillStyle = '#0076ff'; ctx.beginPath(); ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI*2); ctx.fill();
-      requestAnimationFrame(draw);
-    }
-    draw();
-  <\/script>
-</body>
-</html>`,
-  wave: `<!DOCTYPE html>
-<html>
-<head>
-  <style>body{margin:0; background:#fff; overflow:hidden;} canvas{display:block; background:#000;}</style>
-</head>
-<body>
-  <canvas id="simCanvas"></canvas>
-  <script>
-    const canvas = document.getElementById('simCanvas'); const ctx = canvas.getContext('2d');
-    function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
-    window.addEventListener('resize', resize); resize();
-    let time = 0;
-    function draw() {
-      ctx.clearRect(0,0,canvas.width,canvas.height); time += 0.05;
-      for(let x=0; x<canvas.width; x+=4) {
-        let y1 = Math.sin(x*0.01 + time) * 60;
-        let y2 = Math.sin(x*0.015 - time*1.2) * 40;
-        let y3 = y1 + y2;
-        ctx.fillStyle='rgba(0,118,255,0.4)'; ctx.fillRect(x, canvas.height/2 + y1, 3, 3);
-        ctx.fillStyle='rgba(239,68,68,0.4)'; ctx.fillRect(x, canvas.height/2 + y2, 3, 3);
-        ctx.fillStyle='#ffffff'; ctx.fillRect(x, canvas.height/2 + y3, 4, 4);
-      }
-      requestAnimationFrame(draw);
-    }
-    draw();
-  <\/script>
-</body>
-</html>`,
-  spring: `<!DOCTYPE html>
-<html>
-<head>
-  <style>body{margin:0; background:#fff; overflow:hidden;} canvas{display:block; background:#f8fafc;}</style>
-</head>
-<body>
-  <canvas id="simCanvas"></canvas>
-  <script>
-    const canvas = document.getElementById('simCanvas'); const ctx = canvas.getContext('2d');
-    function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
-    window.addEventListener('resize', resize); resize();
-    let y = 200, vy = 0, k = 0.05, mass = 10, restY = 200;
-    function draw() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      let fSpring = -k * (y - restY); vy += fSpring / mass; vy *= 0.98; y += vy;
-      let cx = canvas.width/2;
-      ctx.strokeStyle='#475569'; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(cx, 0);
-      let turns = 20;
-      for(let i=0; i<=turns; i++) {
-        let ty = (y / turns) * i; let tx = cx + (i%2===0?20:-20); if(i===0||i===turns) tx=cx;
-        ctx.lineTo(tx, ty);
-      }
-      ctx.stroke();
-      ctx.fillStyle='#0076ff'; ctx.beginPath(); ctx.arc(cx, y, 25, 0, Math.PI*2); ctx.fill();
-      requestAnimationFrame(draw);
-    }
-    window.addEventListener('click', ()=>{ vy = 25; });
-    draw();
-  <\/script>
-</body>
-</html>`,
-  circuit: `<!DOCTYPE html>
-<html>
-<head>
-  <style>body{margin:0; background:#fff; display:flex; align-items:center; justify-content:center; height:100vh; font-family:sans-serif; color:#334155;}</style>
-</head>
-<body>
-  <div style="text-align:center; padding:20px; border:2px dashed #cbd5e1; border-radius:12px; background:#f8fafc;">
-    <h3>⚡ 직렬 전기 회로 가상 실험</h3>
-    <p>전압과 저항의 상호작용을 오옴의 법칙(I = V/R)으로 시각화합니다.</p>
-    <div style="margin:20px 0;">
-      <label style="font-weight:bold;">전압 (V): <span id="v-val">9</span>V</label><br>
-      <input type="range" id="v-in" min="1" max="24" value="9" oninput="calc()"><br><br>
-      <label style="font-weight:bold;">저항 (R): <span id="r-val">10</span>Ω</label><br>
-      <input type="range" id="r-in" min="1" max="50" value="10" oninput="calc()">
-    </div>
-    <h2 style="color:#0076ff;">전류 (I) = <span id="i-val">0.90</span> A</h2>
-  </div>
-  <script>
-    function calc() {
-      const v = parseFloat(document.getElementById('v-in').value);
-      const r = parseFloat(document.getElementById('r-in').value);
-      document.getElementById('v-val').innerText = v;
-      document.getElementById('r-val').innerText = r;
-      document.getElementById('i-val').innerText = (v/r).toFixed(2);
-    }
-    calc();
-  <\/script>
-</body>
-</html>`
+  pendulum: `<!DOCTYPE html><html><head><style>body { margin: 0; background: #fff; overflow: hidden; font-family: sans-serif; } canvas { display: block; background: #f8fafc; } .controls { position: fixed; top: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); } label { font-size: 12px; font-weight: bold; color: #334155; display: block; margin-bottom: 4px; } input { width: 120px; margin-bottom: 8px; display: block; }</style></head><body><div class="controls"><label>줄 길이 (px)</label><input type="range" id="length" min="50" max="250" value="180"><label>중력 가속도</label><input type="range" id="gravity" min="0" max="2" step="0.1" value="0.8"></div><canvas id="simCanvas"></canvas><script>const canvas = document.getElementById('simCanvas'); const ctx = canvas.getContext('2d'); function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; } window.addEventListener('resize', resize); resize(); let angle = Math.PI / 4; let angleV = 0; let angleA = 0; function draw() { ctx.clearRect(0, 0, canvas.width, canvas.height); const L = parseFloat(document.getElementById('length').value); const g = parseFloat(document.getElementById('gravity').value); angleA = (-1 * g / L) * Math.sin(angle); angleV += angleA; angleV *= 0.995; angle = angle + angleV; const originX = canvas.width / 2; const originY = 80; const x = originX + L * Math.sin(angle); const y = originY + L * Math.cos(angle); ctx.strokeStyle = '#64748b'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(originX, originY); ctx.lineTo(x, y); ctx.stroke(); ctx.fillStyle = '#0076ff'; ctx.beginPath(); ctx.arc(x, y, 20, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#334155'; ctx.beginPath(); ctx.arc(originX, originY, 6, 0, Math.PI * 2); ctx.fill(); requestAnimationFrame(draw); } draw();<\/script></body></html>`,
+  projectile: `<!DOCTYPE html><html><head><style>body { margin: 0; background: #fff; overflow: hidden; font-family: sans-serif; } canvas { display: block; background: #f8fafc; } .controls { position: fixed; top: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); } button { background: #0076ff; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; }</style></head><body><div class="controls"><button onclick="launch()">발사!</button></div><canvas id="simCanvas"></canvas><script>const canvas = document.getElementById('simCanvas'); const ctx = canvas.getContext('2d'); function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; } window.addEventListener('resize', resize); resize(); let ball = { x: 50, y: 0, vx: 8, vy: -12, r: 12 }; const g = 0.2; let path = []; ball.y = canvas.height - 50; function launch() { ball.x = 50; ball.y = canvas.height - 50; ball.vx = 7 + Math.random() * 4; ball.vy = -10 - Math.random() * 6; path = []; } function draw() { ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.strokeStyle = '#cbd5e1'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(0, canvas.height-50); ctx.lineTo(canvas.width, canvas.height-50); ctx.stroke(); if (ball.y < canvas.height - 50 + ball.r) { ball.vy += g; ball.x += ball.vx; ball.y += ball.vy; path.push({x: ball.x, y: ball.y}); } ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 2; ctx.beginPath(); for(let i=0; i<path.length; i++) { if(i===0) ctx.moveTo(path[i].x, path[i].y); else ctx.lineTo(path[i].x, path[i].y); } ctx.stroke(); ctx.fillStyle = '#0076ff'; ctx.beginPath(); ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI*2); ctx.fill(); requestAnimationFrame(draw); } draw();<\/script></body></html>`,
+  wave: `<!DOCTYPE html><html><head><style>body{margin:0; background:#fff; overflow:hidden;} canvas{display:block; background:#000;}</style></head><body><canvas id="simCanvas"></canvas><script>const canvas = document.getElementById('simCanvas'); const ctx = canvas.getContext('2d'); function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; } window.addEventListener('resize', resize); resize(); let time = 0; function draw() { ctx.clearRect(0,0,canvas.width,canvas.height); time += 0.05; for(let x=0; x<canvas.width; x+=4) { let y1 = Math.sin(x*0.01 + time) * 60; let y2 = Math.sin(x*0.015 - time*1.2) * 40; let y3 = y1 + y2; ctx.fillStyle='rgba(0,118,255,0.4)'; ctx.fillRect(x, canvas.height/2 + y1, 3, 3); ctx.fillStyle='rgba(239,68,68,0.4)'; ctx.fillRect(x, canvas.height/2 + y2, 3, 3); ctx.fillStyle='#ffffff'; ctx.fillRect(x, canvas.height/2 + y3, 4, 4); } requestAnimationFrame(draw); } draw();<\/script></body></html>`,
+  spring: `<!DOCTYPE html><html><head><style>body{margin:0; background:#fff; overflow:hidden;} canvas{display:block; background:#f8fafc;}</style></head><body><canvas id="simCanvas"></canvas><script>const canvas = document.getElementById('simCanvas'); const ctx = canvas.getContext('2d'); function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; } window.addEventListener('resize', resize); resize(); let y = 200, vy = 0, k = 0.05, mass = 10, restY = 200; function draw() { ctx.clearRect(0,0,canvas.width,canvas.height); let fSpring = -k * (y - restY); vy += fSpring / mass; vy *= 0.98; y += vy; let cx = canvas.width/2; ctx.strokeStyle='#475569'; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(cx, 0); let turns = 20; for(let i=0; i<=turns; i++) { let ty = (y / turns) * i; let tx = cx + (i%2===0?20:-20); if(i===0||i===turns) tx=cx; ctx.lineTo(tx, ty); } ctx.stroke(); ctx.fillStyle='#0076ff'; ctx.beginPath(); ctx.arc(cx, y, 25, 0, Math.PI*2); ctx.fill(); requestAnimationFrame(draw); } window.addEventListener('click', ()=>{ vy = 25; }); draw();<\/script></body></html>`,
+  circuit: `<!DOCTYPE html><html><head><style>body{margin:0; background:#fff; display:flex; align-items:center; justify-content:center; height:100vh; font-family:sans-serif; color:#334155;}</style></head><body><div style="text-align:center; padding:20px; border:2px dashed #cbd5e1; border-radius:12px; background:#f8fafc;"><h3>⚡ 직렬 전기 회로 가상 실험</h3><p>전압과 저항의 상호작용을 오옴의 법칙(I = V/R)으로 시각화합니다.</p><div style="margin:20px 0;"><label style="font-weight:bold;">전압 (V): <span id="v-val">9</span>V</label><br><input type="range" id="v-in" min="1" max="24" value="9" oninput="calc()"><br><br><label style="font-weight:bold;">저항 (R): <span id="r-val">10</span>Ω</label><br><input type="range" id="r-in" min="1" max="50" value="10" oninput="calc()"></div><h2 style="color:#0076ff;">전류 (I) = <span id="i-val">0.90</span> A</h2></div><script>function calc() { const v = parseFloat(document.getElementById('v-in').value); const r = parseFloat(document.getElementById('r-in').value); document.getElementById('v-val').innerText = v; document.getElementById('r-val').innerText = r; document.getElementById('i-val').innerText = (v/r).toFixed(2); } calc();<\/script></body></html>`
 };
 
 let currentView = 'editor';
@@ -635,32 +393,6 @@ let currentCategory = 'all';
 let itemsData = [];
 let isAdminMode = false;
 let passwordActionData = null;
-
-const PROMPT_TEMPLATE = `너는 고등학교 과학(물리) 시뮬레이션 앱 제작 과정을 정리하는 도우미 AI다. 
-아래 제공되는 [AI 대화 원문]은 학생이 시뮬레이션을 만들기 위해 AI와 나눈 실제 대화 전체다. 
-이 대화를 꼼꼼히 분석하여 갤러리에 모두가 볼 수 있도록 정돈된 '공개용 보고서'를 완성해라.
-
-[작성 조건 및 양식]
-1. 존댓말로 작성하고, 가독성을 극대화하기 위해 마크다운 기호 없이 순수 텍스트와 줄바꿈, 이모지만 사용하여 줄글로 가독성 좋게 적어줘.
-2. 학생의 개인 정보(이름, 이메일, 계정, 비번, 인증코드 등)나 사적인 대화, 쓸데없는 인사말은 절대 포함하지 마라.
-3. 양식은 정확히 아래 4가지 대주제 구분을 따르고, 각 주제 아래에 상세 내용을 서술해라.
-
-■ 1. 기획 의도 및 구현 목표
-- 이 앱을 왜 만들려고 했는지, 어떤 물리 현상을 시각화하는 것이 핵심 목표였는지 설명해줘.
-
-■ 2. AI와의 협업 과정 (질문과 해결)
-- 학생이 AI에게 처음 요구한 조건은 무엇이었고, 코딩 중 발생한 오류나 수정 사항을 AI를 활용해 어떻게 해결해 나갔는지 대화의 흐름을 요약해줘.
-
-■ 3. 핵심 기능 및 물리 원리 설명
-- 완성된 앱 화면에서 사용자가 무엇을 조작할 수 있는지(슬라이더, 버튼 등) 설명하고, 이 앱에 적용된 물리 법칙이나 수학적 공식(예: 가속도, 삼각함수, 오옴의 법칙 등)을 쉽게 해설해줘.
-
-■ 4. 제작 소감 및 발전 방향
-- 이 작업을 통해 깨달은 점이나 추후 업그레이드하고 싶은 기능(데이터 저장, 그래프 고도화 등)을 상상하여 적어줘.
-
-이제 아래에 붙여넣어질 [AI 대화 원문]을 바탕으로 완벽한 보고서를 작성해라.
---------------------------------------------
-[AI 대화 원문]
-`;
 
 window.addEventListener('DOMContentLoaded', () => {
   const savedCode = localStorage.getItem('rp_local_code');
@@ -673,11 +405,9 @@ window.addEventListener('DOMContentLoaded', () => {
   setupEditorHotkeys();
   fetchGalleryData();
   
-  try {
-    if(localStorage.getItem('rp_admin_session') === 'true') {
-      enableAdminView();
-    }
-  } catch(e){}
+  if(localStorage.getItem('rp_admin_session') === 'true') {
+    enableAdminView();
+  }
 });
 
 function setupEditorHotkeys() {
@@ -689,13 +419,9 @@ function setupEditorHotkeys() {
       ed.value = ed.value.substring(0, s) + "  " + ed.value.substring(en);
       ed.selectionStart = ed.selectionEnd = s + 2;
     }
-    if(e.key === 'Enter' && e.ctrlKey) {
-      e.preventDefault();
-      runPreview();
-    }
   });
   ed.addEventListener('input', () => {
-    try { localStorage.setItem('rp_local_code', ed.value); } catch(err){}
+    localStorage.setItem('rp_local_code', ed.value);
   });
 }
 
@@ -724,7 +450,7 @@ function copyEditorCode() {
 function runPreview() {
   const code = document.getElementById('code-editor').value;
   const frame = document.getElementById('preview-iframe');
-  frame.srcdoc = code || `<!DOCTYPE html><html><body style="background:#fff; color:#666; font-family:sans-serif; padding:30px; text-align:center;"><h3>⚛ 빈 코드가 입력되었습니다.</h3><p>오른쪽 에디터에 코드를 작성하고 실행을 누르거나 예제를 선택하세요.</p></body></html>`;
+  frame.srcdoc = code || `<!DOCTYPE html><html><body><h3>빈 코드입니다.</h3></body></html>`;
 }
 
 function showView(view) {
@@ -750,55 +476,32 @@ function showView(view) {
 }
 
 function toggleTheme() {
-  const html = document.documentElement;
-  const btn = document.getElementById('theme-btn');
-  const cur = localStorage.getItem('rp_theme') || 'dark';
-  if(cur === 'dark') {
-    applyTheme('light');
-  } else {
-    applyTheme('dark');
-  }
+  const cur = localStorage.getItem('rp_theme') || 'light';
+  applyTheme(cur === 'light' ? 'dark' : 'light');
 }
 
 function applyTheme(theme) {
   const btn = document.getElementById('theme-btn');
   if(theme === 'light') {
-    // 화사한 라이트 컬러 테마
     document.documentElement.style.setProperty('--bg', '#f4f7fa');
     document.documentElement.style.setProperty('--bg2', '#ffffff');
     document.documentElement.style.setProperty('--bg3', '#eef2f7');
     document.documentElement.style.setProperty('--bg4', '#e0e6ed');
     document.documentElement.style.setProperty('--text', '#1f2937');
     document.documentElement.style.setProperty('--text2', '#4b5563');
-    document.documentElement.style.setProperty('--border', 'rgba(0,0,0,0.08)');
-    document.documentElement.style.setProperty('--borderB', 'rgba(0,118,255,0.3)');
     btn.innerText = '🌙 다크모드';
-    try{localStorage.setItem('rp_theme','light');}catch(e){}
+    localStorage.setItem('rp_theme', 'light');
   } else {
-    // 다크 모드 요청은 따로 없었으므로 기본값도 화사한 테마에 준하게 하거나 원본 로직 유지
-    // 전체적인 색감을 화사하게 바꿔달라 하셨으므로 다크 모드 클릭 시에도 다소 밝고 화사한 딥블루 형태로 설정
     document.documentElement.style.setProperty('--bg', '#eef2f7');
     document.documentElement.style.setProperty('--bg2', '#ffffff');
     document.documentElement.style.setProperty('--bg3', '#e0e6ed');
     document.documentElement.style.setProperty('--bg4', '#cbd5e1');
     document.documentElement.style.setProperty('--text', '#0f172a');
     document.documentElement.style.setProperty('--text2', '#334155');
-    document.documentElement.style.setProperty('--border', 'rgba(0,0,0,0.1)');
-    document.documentElement.style.setProperty('--borderB', 'rgba(0,118,255,0.4)');
     btn.innerText = '☀️ 라이트모드';
-    try{localStorage.setItem('rp_theme','dark');}catch(e){}
+    localStorage.setItem('rp_theme', 'dark');
   }
 }
-
-(function(){
-  let saved = "dark";
-  try { saved = localStorage.getItem("rp_theme") || "dark"; } catch(e) {}
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function(){ applyTheme(saved); });
-  } else {
-    applyTheme(saved);
-  }
-})();
 
 function showToast(msg) {
   const t = document.getElementById('toast');
@@ -809,34 +512,18 @@ function showToast(msg) {
 function openFullscreen() {
   const code = document.getElementById('code-editor').value;
   document.getElementById('fsview-bg').style.display = 'flex';
-  const container = document.getElementById('fsview-body-container');
-  container.innerHTML = `<iframe class="preview-iframe" id="fs-iframe" sandbox="allow-scripts"></iframe>`;
+  document.getElementById('fsview-body-container').innerHTML = `<iframe class="preview-iframe" id="fs-iframe" sandbox="allow-scripts"></iframe>`;
   document.getElementById('fs-iframe').srcdoc = code;
 }
 function closeFullscreen() {
   document.getElementById('fsview-bg').style.display = 'none';
-  document.getElementById('fsview-body-container').innerHTML = '';
 }
-window.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && document.getElementById('fsview-bg').style.display === 'flex') {
-    closeFullscreen();
-  }
-});
 
-function openUploadModal() {
-  document.getElementById('upload-modal').style.display = 'flex';
-}
-function closeUploadModal() {
-  document.getElementById('upload-modal').style.display = 'none';
-}
+function openUploadModal() { document.getElementById('upload-modal').style.display = 'flex'; }
+function closeUploadModal() { document.getElementById('upload-modal').style.display = 'none'; }
 function togglePassView(id) {
   const el = document.getElementById(id);
   el.type = el.type === 'password' ? 'text' : 'password';
-}
-function copyPromptTemplate() {
-  navigator.clipboard.writeText(PROMPT_TEMPLATE).then(() => {
-    showToast('📋 요약 프롬프트가 복사되었습니다! AI 대화창에 붙여넣으세요.');
-  });
 }
 
 function switchTab(tab) {
@@ -847,18 +534,10 @@ function switchTab(tab) {
 }
 function filterCategory(cat) {
   currentCategory = cat;
-  const items = document.querySelectorAll('#category-box .menu-item');
-  items.forEach(el => el.classList.remove('active'));
-  event.currentTarget.classList.add('active');
   renderCards();
 }
 function handleSearch() { renderCards(); }
 function handleSort() { renderCards(); }
-
-function getTagLabel(tag) {
-  const mapping = { mech:'역학', elec:'전기·자기', wave:'파동·광학', thermo:'열역학', optics:'광학', etc:'기타', teacher:'👨‍🏫 교사 자료' };
-  return mapping[tag] || '일반';
-}
 
 function fetchGalleryData() {
   fetch(`https://api.jsonbin.io/v3/b/${CONFIG.BIN_ID}/latest`, {
@@ -866,37 +545,21 @@ function fetchGalleryData() {
   })
   .then(res => res.json())
   .then(res => {
-    if(res.record && Array.isArray(res.record.items)) {
-      itemsData = res.record.items;
-    } else {
-      itemsData = [];
-    }
+    if(res.record && Array.isArray(res.record.items)) itemsData = res.record.items;
     if(currentView === 'gallery') renderCards();
-  })
-  .catch(err => {
-    console.error(err);
-    showToast('❌ 데이터를 가져오지 못했습니다.');
   });
 }
 
 function updateRemoteData(newItems, successMsg) {
   fetch(`https://api.jsonbin.io/v3/b/${CONFIG.BIN_ID}`, {
     method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Master-Key': CONFIG.X_MASTER_KEY
-    },
+    headers: { 'Content-Type': 'application/json', 'X-Master-Key': CONFIG.X_MASTER_KEY },
     body: JSON.stringify({ items: newItems })
   })
-  .then(res => res.json())
   .then(() => {
     itemsData = newItems;
     renderCards();
     showToast(successMsg);
-  })
-  .catch(err => {
-    console.error(err);
-    showToast('❌ 서버 저장에 실패했습니다.');
   });
 }
 
@@ -906,69 +569,27 @@ function submitUpload() {
   const tag = document.getElementById('up-tag').value;
   const password = document.getElementById('up-password').value.trim();
   const desc = document.getElementById('up-desc').value.trim();
-  const aiChat = document.getElementById('up-ai-chat').value.trim();
-  const report = document.getElementById('up-report').value.trim();
   const code = document.getElementById('code-editor').value;
 
-  if(!title) { alert('시뮬레이션 제목을 입력하세요.'); return; }
-  if(!password || password.length < 4) { alert('수정/삭제용 비밀번호를 4자리 이상 입력하세요.'); return; }
-  if(!report) { alert('공개용 앱 제작 과정 보고서를 입력하세요. 안내 프롬프트를 이용해 AI에게 받아적으면 편리합니다.'); return; }
-  if(!code || code.trim().length < 50) { alert('에디터에 정상적인 시뮬레이션 코드가 입력되어 있지 않습니다.'); return; }
+  if(!title || !password) { alert('필수 항목을 입력하세요.'); return; }
 
   const newItem = {
-    id: 'item_' + Date.now() + '_' + Math.floor(Math.random()*1000),
-    title, author, tag, password, desc, aiChat, report, code,
-    views: 0,
-    isTeacherRecom: (isAdminMode && tag==='teacher'),
-    date: new Date().toISOString()
+    id: 'item_' + Date.now(),
+    title, author, tag, password, desc, code,
+    views: 0, date: new Date().toISOString()
   };
 
-  const updated = [newItem, ...itemsData];
-  updateRemoteData(updated, '🎉 성공적으로 업로드되었습니다!');
+  updateRemoteData([newItem, ...itemsData], '🎉 업로드되었습니다!');
   closeUploadModal();
-  
-  // 입력 폼 초기화
-  document.getElementById('up-title').value = '';
-  document.getElementById('up-author').value = '';
-  document.getElementById('up-password').value = '';
-  document.getElementById('up-desc').value = '';
-  document.getElementById('up-ai-chat').value = '';
-  document.getElementById('up-report').value = '';
 }
 
 function renderCards() {
   const grid = document.getElementById('cards-grid');
   grid.innerHTML = '';
-
-  const query = document.getElementById('gallery-search').value.toLowerCase().trim();
-  const sort = document.getElementById('gallery-sort').value;
-
-  let filtered = itemsData.filter(item => {
-    if(currentTab === 'teacher_recom') {
-      return item.isTeacherRecom === true;
-    } else {
-      return !item.isTeacherRecom;
-    }
-  });
-
-  if(currentCategory !== 'all') {
-    filtered = filtered.filter(item => item.tag === currentCategory);
-  }
-
-  if(query) {
-    filtered = filtered.filter(item => item.title.toLowerCase().includes(query) || item.author.toLowerCase().includes(query));
-  }
-
-  if(sort === 'views') {
-    filtered.sort((a,b) => (b.views||0) - (a.views||0));
-  } else if(sort === 'title') {
-    filtered.sort((a,b) => a.title.localeCompare(b.title));
-  } else {
-    filtered.sort((a,b) => new Date(b.date) - new Date(a.date));
-  }
+  let filtered = itemsData;
 
   if(filtered.length === 0) {
-    grid.innerHTML = `<div class="empty-msg">검색 결과에 맞는 프로젝트가 존재하지 않습니다.</div>`;
+    grid.innerHTML = `<div class="empty-msg">프로젝트가 없습니다.</div>`;
     return;
   }
 
@@ -976,203 +597,38 @@ function renderCards() {
     const card = document.createElement('div');
     card.className = 'card';
     card.onclick = () => viewItem(item.id);
-
-    const dateStr = item.date ? item.date.substring(0,10) : '';
-
     card.innerHTML = `
-      <div class="card-thumb">
-        <iframe srcdoc="${escapeHtml(item.code || '')}" sandbox="allow-scripts"></iframe>
-      </div>
-      <div class="card-body">
-        <div style="display:flex; justify-content:between; align-items:center;">
-          <span class="card-tag">${getTagLabel(item.tag)}</span>
-          <button class="view-report-btn" onclick="event.stopPropagation(); showReportPopup('${item.id}')">제작 보고서 📄</button>
-        </div>
-        <h4 class="card-title">${escapeHtml(item.title)}</h4>
-        <p class="card-desc">${escapeHtml(item.desc || '설명이 없습니다.')}</p>
-      </div>
-      <div class="card-foot">
-        <div class="card-author">👤 ${escapeHtml(item.author)}</div>
-        <div class="card-meta">
-          <span>👁 ${item.views||0}</span>
-          <span style="font-size:0.75rem;">${dateStr}</span>
-        </div>
-      </div>
-      ${isAdminMode || item.password ? `
-        <div style="padding:4px 12px; background:var(--bg4); border-top:1px solid var(--border); display:flex; justify-content:end; gap:8px;" onclick="event.stopPropagation();">
-          ${isAdminMode && !item.isTeacherRecom ? `<button class="view-report-btn" style="color:var(--amber); margin-right:auto;" onclick="showAdminAudit('${item.id}')">🔒 대화감사</button>`:''}
-          ${isAdminMode && currentTab==='student' ? `<button class="view-report-btn" style="color:var(--green); margin-right:4px;" onclick="recommendItem('${item.id}')">추천</button>` : ''}
-          <button class="view-report-btn" style="color:var(--text2);" onclick="reqEditItem('${item.id}')">수정</button>
-          <button class="view-report-btn" style="color:var(--red);" onclick="reqDeleteItem('${item.id}')">삭제</button>
-          <button class="view-report-btn" style="color:var(--accent);" onclick="openQrPopup('${item.id}', '${escapeHtml(item.title)}')">📱 QR</button>
-        </div>
-      `:''}
+      <div class="card-thumb"><iframe srcdoc="${item.code}" sandbox="allow-scripts"></iframe></div>
+      <div class="card-body"><h5>${item.title}</h5><p>${item.desc || ''}</p></div>
     `;
     grid.appendChild(card);
   });
 }
 
-function escapeHtml(str) {
-  if(!str) return '';
-  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-}
-
 function viewItem(id) {
   const item = itemsData.find(i => i.id === id);
   if(!item) return;
-
-  item.views = (item.views || 0) + 1;
   document.getElementById('code-editor').value = item.code;
   showView('editor');
-  showToast(`🚀 '${item.title}' 실험 데이터가 편집기에 로드되었습니다.`);
-  
-  // 백그라운드 조회수 업데이트
-  fetch(`https://api.jsonbin.io/v3/b/${CONFIG.BIN_ID}`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json', 'X-Master-Key': CONFIG.X_MASTER_KEY },
-    body: JSON.stringify({ items: itemsData })
-  }).catch(e=>console.error(e));
+  runPreview();
 }
 
-function showReportPopup(id) {
-  const item = itemsData.find(i => i.id === id);
-  if(!item) return;
-  document.getElementById('report-modal-body').innerText = item.report || '보고서 내용이 기재되지 않았습니다.';
-  document.getElementById('report-modal').style.display = 'flex';
-}
-function closeReportModal() { document.getElementById('report-modal').style.display = 'none'; }
-
-function openQrPopup(id, title) {
-  event.stopPropagation();
-  const target = document.getElementById('qr-canvas-target');
-  target.innerHTML = '';
-  document.getElementById('qr-modal-title').innerText = title;
-  
-  // 현재 깃허브 페이지 주소와 호환되게 구성
-  const url = window.location.href.split('?')[0] + '?id=' + id;
-  
-  new QRCode(target, { text: url, width: 140, height: 140 });
-  document.getElementById('qr-modal').style.display = 'flex';
-}
-function closeQrModal() { document.getElementById('qr-modal').style.display = 'none'; }
-
-// 패스워드 검증 메커니즘
-function executePasswordAction() {
-  const input = document.getElementById('confirm-password-input').value.trim();
-  if(!passwordActionData) return;
-  const item = itemsData.find(i => i.id === passwordActionData.itemId);
-  if(!item) return;
-
-  if(input === item.password || isAdminMode) {
-    const act = passwordActionData.type;
-    closePasswordModal();
-    if(act === 'delete') {
-      if(confirm('이 항목을 정말 영구 삭제할까요?')) {
-        const filtered = itemsData.filter(i => i.id !== item.id);
-        updateRemoteData(filtered, '🗑 프로젝트가 정상 삭제되었습니다.');
-      }
-    } else if(act === 'edit') {
-      const newTitle = prompt('새로운 제목을 입력하세요:', item.title);
-      if(newTitle === null) return;
-      const newDesc = prompt('새로운 한 줄 설명을 입력하세요:', item.desc);
-      if(newDesc === null) return;
-      
-      item.title = newTitle.trim() || item.title;
-      item.desc = newDesc.trim() || item.desc;
-      item.code = document.getElementById('code-editor').value;
-      
-      updateRemoteData(itemsData, '✏️ 프로젝트 정보 및 현재 에디터 코드로 수정 완수!');
-    }
-  } else {
-    alert('비밀번호가 일치하지 않습니다.');
-  }
-}
-
-function reqDeleteItem(id) {
-  passwordActionData = { type: 'delete', itemId: id };
-  if(isAdminMode) { executePasswordAction(); } else { openPasswordModal(); }
-}
-function reqEditItem(id) {
-  passwordActionData = { type: 'edit', itemId: id };
-  if(isAdminMode) { executePasswordAction(); } else { openPasswordModal(); }
-}
-function openPasswordModal() {
-  document.getElementById('confirm-password-input').value = '';
-  document.getElementById('password-modal').style.display = 'flex';
-}
-function closePasswordModal() { document.getElementById('password-modal').style.display = 'none'; }
-
-// 교사 추천 기능
-function recommendItem(id) {
-  const item = itemsData.find(i => i.id === id);
-  if(!item) return;
-  if(confirm(`[교사 전용] '${item.title}' 작품을 검증된 교사 추천 탭으로 복사 이동할까요?`)) {
-    item.isTeacherRecom = true;
-    item.tag = 'teacher';
-    updateRemoteData(itemsData, '👑 우수 프로젝트로 선정하여 교사 추천 탭으로 게시 완료!');
-  }
-}
-
-function showAdminAudit(id) {
-  const item = itemsData.find(i => i.id === id);
-  if(!item) return;
-  alert(`[AI 대화 무수정 검사 원문]\n\n${item.aiChat || '대화 원문 기록이 비어있습니다.'}`);
-}
-
-// 관리자 패스워드 인증 시스템
 function openAdminModal() { document.getElementById('admin-modal').style.display = 'flex'; }
 function closeAdminModal() { document.getElementById('admin-modal').style.display = 'none'; }
-
 function adminLogin() {
-  const input = document.getElementById('admin-password-input').value;
-  if(input === CONFIG.ADMIN_HASH) {
-    isAdminMode = true;
-    try{localStorage.setItem('rp_admin_session', 'true');}catch(e){}
+  if(document.getElementById('admin-password-input').value === CONFIG.ADMIN_HASH) {
     enableAdminView();
     closeAdminModal();
-    showToast('🔒 관리자 권한이 성공적으로 부여되었습니다.');
-  } else {
-    alert('인증 비밀번호가 다릅니다.');
-  }
+  } else { alert('암호가 다릅니다.'); }
 }
-
 function enableAdminView() {
   isAdminMode = true;
-  document.getElementById('admin-login-btn').style.display = 'none';
-  document.getElementById('admin-logout-btn').style.display = 'inline-flex';
   document.getElementById('admin-badge').style.display = 'inline-flex';
-  document.getElementById('opt-teacher').style.display = 'block';
-  document.getElementById('tab-teacher').innerText = '👨‍🏫 교사 추천 관람관';
-  if(currentView === 'gallery') renderCards();
 }
-
 function adminLogout() {
   isAdminMode = false;
-  try{localStorage.removeItem('rp_admin_session');}catch(e){}
-  document.getElementById('admin-login-btn').style.display = 'inline-flex';
-  document.getElementById('admin-logout-btn').style.display = 'none';
   document.getElementById('admin-badge').style.display = 'none';
-  document.getElementById('opt-teacher').style.display = 'none';
-  document.getElementById('tab-teacher').innerText = '교사 추천 (준비중)';
-  showToast('🔒 관리자 로그아웃 되었습니다.');
-  if(currentView === 'gallery') renderCards();
 }
-
-// 딥링크 파서
-(function parseUrlParams() {
-  setTimeout(() => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    if(id && itemsData.length > 0) {
-      const matched = itemsData.find(i => i.id === id);
-      if(matched) {
-        document.getElementById('code-editor').value = matched.code;
-        runPreview();
-        showToast(`📱 QR 코드를 통해 '${matched.title}' 작품을 연동했습니다.`);
-      }
-    }
-  }, 1200);
-})();
 </script>
 </body>
 </html>
