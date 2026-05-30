@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physics</title>
+<title>Class_Physics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -276,7 +276,7 @@ body.light-mode small{
 <body>
 <header>
   <div>
-    <div class="logo-main"><span>_</span>Physics<span style="font-size:11px;color:#8892a4;font-weight:400">(물리쌤 최태현)</span></div>
+    <div class="logo-main"><span></span>Class_Physics<span style="font-size:11px;color:#8892a4;font-weight:400">(물리쌤 최태현)</span></div>
     <div class="logo-sub">물리를 물리스럽게</div>
   </div>
   <div class="hright">
@@ -408,7 +408,7 @@ AI에게 이렇게 요청해보세요:
         <select class="sort-sel" id="sort-sel" onchange="renderG()">
           <option value="latest">최신순</option><option value="views">조회수순</option><option value="title">제목순</option>
         </select>
-        <button class="btn" onclick="showQR(location.href,'홈페이지 QR','Physics 홈페이지')" style="font-size:11px;padding:6px 10px">&#128241; QR</button>
+        <button class="btn" onclick="showQR(location.href,'홈페이지 QR','Class_Physics 홈페이지')" style="font-size:11px;padding:6px 10px">&#128241; QR</button>
       </div>
     </div>
     <div class="subtabs">
@@ -431,7 +431,7 @@ AI에게 이렇게 요청해보세요:
 </div>
 </div>
 <div class="fsov" id="fsov">
-  <div class="fsbar"><span>Physics &#8212; 전체화면</span><button class="btn" onclick="closeFs()">&#10005; 닫기 (ESC)</button></div>
+  <div class="fsbar"><span>Class_Physics &#8212; 전체화면</span><button class="btn" onclick="closeFs()">&#10005; 닫기 (ESC)</button></div>
   <iframe id="fs-frame" sandbox="allow-scripts allow-same-origin allow-modals allow-forms allow-popups allow-downloads"></iframe>
 </div>
 <div class="mbg" id="mbg" onclick="if(event.target===this)closeM()">
@@ -1022,7 +1022,7 @@ function confPw() {
       var titleBar = document.createElement("div");
       titleBar.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:10000;padding:10px 18px;background:rgba(10,14,26,.85);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;transition:opacity .5s";
       titleBar.innerHTML = '<span style="font-family:\'Space Mono\',monospace;font-size:12px;color:#00d4ff">' + (post.title || "") + '</span>'
-        + '<a href="' + location.href.split("?")[0] + '" style="font-family:monospace;font-size:11px;color:#8892a4;text-decoration:none">Physics</a>';
+        + '<a href="' + location.href.split("?")[0] + '" style="font-family:monospace;font-size:11px;color:#8892a4;text-decoration:none">Class_Physics</a>';
       document.body.appendChild(titleBar);
       setTimeout(function() { titleBar.style.opacity = "0"; setTimeout(function() { titleBar.style.display = "none"; }, 500); }, 3000);
       setFrameSrcdoc(frame, post.code);
