@@ -8,7 +8,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
-:root{--bg:#0a0e1a;--bg2:#111827;--bg3:#1a2235;--bg4:#0d1117;--accent:#00d4ff;--green:#10b981;--red:#f87171;--amber:#f59e0b;--text:#e8edf5;--text2:#8892a4;--border:rgba(255,255,255,0.07);--borderB:rgba(0,212,255,0.25);--mono:'Space Mono',monospace;--sans:'Noto Sans KR',sans-serif;--r:10px}
+:root{
+  --bg: #f5f7fb;       /* 화사하고 시원한 연한 블루그레이 바탕 */
+  --bg2: #ffffff;      /* 카드 및 주요 콘텐츠 박스 (순백색) */
+  --bg3: #e4e9f2;      /* 리스트나 호버 시 강조되는 연한 회색 */
+  --bg4: #edf1f7;      /* 입력창 및 코드 영역 배경 */
+  --accent: #ff007f;   /* ★비비드 포인트: 쨍한 네온 핫핑크 */
+  --green: #00d97e;    /* ★비비드 포인트: 싱그러운 에메랄드 그린 */
+  --red: #ff3366;      /* ★비비드 포인트: 강렬한 비비드 레드 */
+  --amber: #ffaa00;    /* ★비비드 포인트: 선명한 오렌지 옐로우 */
+  --text: #192038;     /* 밝은 배경에서 글씨가 잘 보이도록 진한 네이비 */
+  --text2: #65758e;    /* 부가 설명용 세련된 슬레이트 그레이 */
+  --border: rgba(0, 0, 0, 0.08); /* 깔끔하고 가벼운 경계선 */
+  --borderB: rgba(255, 0, 127, 0.25); /* 핫핑크 포인트가 들어간 테두리 */
+  --mono: 'Space Mono', monospace;
+  --sans: 'Noto Sans KR', sans-serif;
+  --r: 10px;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);height:100vh;overflow:hidden;display:flex;flex-direction:column}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
